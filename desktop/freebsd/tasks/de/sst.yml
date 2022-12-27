@@ -7,3 +7,4 @@
   make:
     chdir: /home/srylax/dev/workspaces/sst/
     target: install
+    force: true
