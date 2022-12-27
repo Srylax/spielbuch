@@ -9,7 +9,7 @@
     state: present
 
 - name: configure seatd
-  command: sysrc seatd_enable=”YES”
+  command: sysrc seatd_enable="YES"
 
 - name: start seatd
   command: service seatd start
