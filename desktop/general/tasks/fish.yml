@@ -1,0 +1,8 @@
+- name: Copy FishConfig
+  copy:
+    src: ../config/fish/config.fish
+    dest: /home/srylax/.config/fish/
+    owner: srylax
+    group: srylax
+    mode: 0755
+    force: true
