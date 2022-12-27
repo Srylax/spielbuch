@@ -1,0 +1,316 @@
+##-- Mod Keys ----------------------------
+set $mod Mod4
+set $alt Mod1
+input * xkb_numlock enable
+
+##-- Fonts (Global) ----------------------
+font "FiraCode Nerd Font" Regular 15
+
+##-- Gaps --------------------------------
+
+# Title bar text alignment
+title_align center
+
+# Uncomment this to enable title bars
+# for_window [class=".*"] border normal 4
+
+# Uncomment this to disable title bars
+default_border pixel
+
+# Gaps (Outer gaps are added to the inner gaps)
+gaps inner 15
+gaps outer 0
+
+# Only enable gaps on a workspace when there is at least one container
+#smart_gaps on
+
+# Activate smart borders (always)
+#smart_borders on
+##-- Background / Screen --------------------------------
+exec lxsession --de=Sway --session=Sway
+exec /usr/bin/lxpolkit
+
+exec wal -R
+exec pywalfox update
+include $HOME/.cache/wal/colors-sway
+
+output HDMI-A-1 mode 2560x1440@120Hz pos 0 0
+output DP-1 mode 2560x1440@165Hz pos 0 1440
+#output DP-1 mode 2560x1440@165Hz pos 0 0
+
+output * bg $wallpaper fill
+
+
+exec wl-paste -t text --watch clipman store
+# exec wl-paste -p -t text --watch clipman store -P
+
+# Fix for screencapture
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+##-- Colors ------------------------------
+
+# class                 border  backgr. text    indicator child_border #$background $foreground $color7 $background
+client.focused          $color0 $background $foreground $color7 $color2
+client.focused_inactive $color0 $background $foreground $color7 $background
+client.urgent           $color0 $background $foreground $color7 $color5
+client.unfocused        $color0 $background $foreground $color7 $background
+client.placeholder      $color0 $background $foreground $color7 $color7
+
+client.background       $background
+
+##-- Autostart ---------------------------
+
+#exec_always --no-startup-id 	~/.config/sway/bin/autostart.sh
+
+##-- Key Bindings ------------------------
+
+# -- Terminal --
+bindsym $mod+Return 			exec --no-startup-id st /bin/fish
+
+# -- Apps --
+# bindsym $mod+Shift+f 			exec --no-startup-id thunar
+# bindsym $mod+Shift+e 			exec --no-startup-id geany
+bindsym $mod+Shift+w 			exec --no-startup-id firefox
+
+# -- rofi --
+bindsym $alt+F1 				exec --no-startup-id ~/.config/sway/rofi/bin/launcher
+bindsym $mod+n 					exec --no-startup-id ~/.config/sway/rofi/bin/network_menu
+bindsym $mod+x 					exec --no-startup-id ~/.config/sway/rofi/bin/powermenu
+bindsym $mod+m 					exec --no-startup-id ~/.config/sway/rofi/bin/mpd
+bindsym $mod+i 					exec --no-startup-id ~/.config/sway/rofi/bin/network
+bindsym $mod+Shift+v			exec --no-startup-id ~/.config/sway/rofi/bin/clipman
+
+# -- Function keys --
+bindsym XF86AudioRaiseVolume 	exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioLowerVolume 	exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym XF86AudioMute 			exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym Control+XF86AudioMute 	Vexec --no-startup-id "pactl set-sink-mute @DEFAULT_SOURCE@ toggle"
+bindsym XF86AudioNext 			exec --no-startup-id "playerctl next"
+bindsym XF86AudioPrev 			exec --no-startup-id "playerctl prev"
+bindsym XF86AudioPlay 			exec --no-startup-id "playerctl play-pause"
+bindsym XF86AudioStop 			exec --no-startup-id "playerctl stop"
+
+# -- swaywm --
+
+# Lockscreen
+bindsym $mod+Control+l exec "~/.config/sway/bin/swaylock.sh"
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# kill focused window
+bindsym $mod+q kill
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+Shift+z layout stacking
+bindsym $mod+Shift+x layout tabbed
+bindsym $mod+Shift+c layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+Shift+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+d focus child
+
+##-- Workspaces ---------------------
+
+exec_always rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+workspace 1 output DP-1
+workspace 2 output DP-1
+workspace 3 output DP-1
+workspace 4 output DP-1
+workspace 5 output DP-1
+workspace 6 output HDMI-A-1
+workspace 7 output HDMI-A-1
+workspace 8 output HDMI-A-1
+workspace 9 output HDMI-A-1
+workspace 10 output HDMI-A-1
+
+# switch to workspace
+bindsym --no-repeat $mod+KP_0 workspace number $ws1; exec "echo 1 > /tmp/sovpipe"
+bindsym --no-repeat $mod+KP_1 workspace number $ws2; exec "echo 1 > /tmp/sovpipe"
+bindsym --no-repeat $mod+KP_2 workspace number $ws3; exec "echo 1 > /tmp/sovpipe"
+bindsym --no-repeat $mod+KP_3 workspace number $ws4; exec "echo 1 > /tmp/sovpipe"
+bindsym --no-repeat $mod+KP_4 workspace number $ws5; exec "echo 1 > /tmp/sovpipe"
+bindsym --no-repeat $mod+KP_5 workspace number $ws6; exec "echo 1 > /tmp/sovpipe"
+bindsym --no-repeat $mod+KP_6 workspace number $ws7; exec "echo 1 > /tmp/sovpipe"
+bindsym --no-repeat $mod+KP_7 workspace number $ws8; exec "echo 1 > /tmp/sovpipe"
+bindsym --no-repeat $mod+KP_8 workspace number $ws9; exec "echo 1 > /tmp/sovpipe"
+bindsym --no-repeat $mod+KP_9 workspace number $ws10; exec "echo 1 > /tmp/sovpipe"
+
+bindsym --release $mod+KP_0 exec "echo 0 > /tmp/sovpipe"
+bindsym --release $mod+KP_1 exec "echo 0 > /tmp/sovpipe"
+bindsym --release $mod+KP_2 exec "echo 0 > /tmp/sovpipe"
+bindsym --release $mod+KP_3 exec "echo 0 > /tmp/sovpipe"
+bindsym --release $mod+KP_4 exec "echo 0 > /tmp/sovpipe"
+bindsym --release $mod+KP_5 exec "echo 0 > /tmp/sovpipe"
+bindsym --release $mod+KP_6 exec "echo 0 > /tmp/sovpipe"
+bindsym --release $mod+KP_7 exec "echo 0 > /tmp/sovpipe"
+bindsym --release $mod+KP_8 exec "echo 0 > /tmp/sovpipe"
+bindsym --release $mod+KP_9 exec "echo 0 > /tmp/sovpipe"
+
+# move focused container to workspace
+bindsym $mod+Shift+KP_0 move container to workspace number $ws1
+bindsym $mod+Shift+KP_1 move container to workspace number $ws2
+bindsym $mod+Shift+KP_2 move container to workspace number $ws3
+bindsym $mod+Shift+KP_3 move container to workspace number $ws4
+bindsym $mod+Shift+KP_4 move container to workspace number $ws5
+bindsym $mod+Shift+KP_5 move container to workspace number $ws6
+bindsym $mod+Shift+KP_6 move container to workspace number $ws7
+bindsym $mod+Shift+KP_7 move container to workspace number $ws8
+bindsym $mod+Shift+KP_8 move container to workspace number $ws9
+bindsym $mod+Shift+KP_9 move container to workspace number $ws10
+
+# reload the configuration file
+bindsym Control+Shift+c reload
+# restart sway inplace (preserves your layout/session, can be used to upgrade sway)
+bindsym Control+Shift+r exec wal -i ~/.config/sway/wallpapers/ --iterative -q
+# quit sway session
+bindsym Control+Shift+q exit
+
+##-- Resize / Move / Gaps ------------------------
+
+# resize window (you can also use the mouse for that)
+mode "Resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+Shift+r mode "Resize"
+
+mode "Move" {
+        # These bindings trigger as soon as you enter the Move mode
+
+        bindsym Left move left 20px
+        bindsym Down move down  20px
+        bindsym Up move up 20px
+        bindsym Right move right 20px
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+m mode "default"
+}
+bindsym $mod+Shift+m mode "Move"
+
+set $mode_gaps Gaps: (o)uter, (i)nner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "$mode_gaps"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "$mode_gaps"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "$mode_gaps"
+        bindsym Escape mode "default"
+}
+
+
+
+
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+##-- Waybar------------------------
+bar {
+  swaybar_command waybar
+  mode hide
+}
+
+##-- Window Rules ------------------------
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [class="alacritty-float"] floating enable
+for_window [class="Pcmanfm|Onboard|Yad"] floating enable
+for_window [class="Lxappearance|Nitrogen"] floating enable
+for_window [class="Pavucontrol|Xfce4-power-manager-settings|Nm-connection-editor"] floating enable
+for_window [class="feh|Viewnior|Gpicview|Gimp|MPlayer"] floating enable
+for_window [class="Kvantum Manager|qt5ct"] floating enable
+for_window [class="VirtualBox Manager|qemu|Qemu-system-x86_64"] floating enable
+for_window [title="Welcome to IntelliJ IDEA"] floating enable

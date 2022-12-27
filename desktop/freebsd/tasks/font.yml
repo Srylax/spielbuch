@@ -1,0 +1,7 @@
+- name: Install Fonts
+  pkgng:
+    name:
+      - firacode
+      - linuxlibertine-g
+      - noto-emoji
+    state: present

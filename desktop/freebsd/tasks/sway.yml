@@ -1,0 +1,15 @@
+- name: Install Wayland and sway
+  pkgng:
+    name:
+      - wayland
+      - seatd
+      - sway
+      - swayidle
+      - swaylock-effects
+    state: present
+
+- name: configure seatd
+  command: sysrc seatd_enable=”YES”
+
+- name: start seatd
+  command: service seatd start

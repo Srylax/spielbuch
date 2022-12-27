@@ -1,0 +1,13 @@
+- name: Install Wayland and sway
+  pkgng:
+    name: fusefs-ntfs
+    state: present
+
+- name: configure fusefs
+  command: sysrc fusefs_load=”YES”
+
+- name: configure fusefs
+  command: sysrc fusefs_enable=”YES”
+
+- name: start fusefs
+  command: kldload fusefs
