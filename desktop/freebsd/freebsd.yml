@@ -6,3 +6,4 @@
     - include_tasks: tasks/ntfs.yml
     - include_tasks: tasks/font.yml
     - include_tasks: ../general/tasks/fontconfig.yml
+    - include_tasks: ../general/tasks/env.yml
