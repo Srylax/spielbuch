@@ -47,7 +47,7 @@ output * bg $wallpaper fill
 # Fix for screencapture
 #exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 #exec hash dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+#     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 ##-- Colors ------------------------------
 
 # class                 border  backgr. text    indicator child_border #$background $foreground $color7 $background

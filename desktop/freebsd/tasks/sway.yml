@@ -9,6 +9,7 @@
       - lxsession
       - py39-pip
       - shuf
+      - imagemagick7
     state: present
 
 - name: Install pywal
@@ -18,7 +19,7 @@
       - pywalfox
 
 - name: Run Pywal
-  command: wal -i $(find /home/srylax/.config/sway/wallpapers/ -type f | shuf -n 1)
+  command: wal -i $(find /home/srylax/.config/sway/wallpapers/ -type f | shuf -n 1) -e
 
 - name: Run Pywalfox
   command: pywalfox install
