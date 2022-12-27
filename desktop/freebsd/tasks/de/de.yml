@@ -1,0 +1,5 @@
+- name: Install Applications
+  pkgng:
+    name:
+      - alacritty
+    state: present

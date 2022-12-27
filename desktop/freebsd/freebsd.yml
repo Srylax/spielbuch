@@ -10,3 +10,4 @@
     - include_tasks: tasks/sway.yml
     - include_tasks: ../general/tasks/swayconfig.yml
     - include_tasks: tasks/ntfs.yml
+    - include_tasks: tasks/de/de.yml

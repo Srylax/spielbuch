@@ -1,4 +1,5 @@
 - name: Install Wayland and sway
+  include_tasks: pywal.yml
   pkgng:
     name:
       - wayland
@@ -7,22 +8,7 @@
       - swayidle
       - swaylock-effects
       - lxsession
-      - py39-pip
-      - shuf
-      - ImageMagick7
     state: present
-
-- name: Install pywal
-  pip:
-    name:
-      - pywal
-      - pywalfox
-
-- name: Run Pywal
-  shell: wal -e -i $(find /home/srylax/.config/sway/wallpapers/ -type f | shuf -n 1)
-
-- name: Run Pywalfox
-  command: pywalfox install
 
 - name: configure seatd
   command: sysrc seatd_enable="YES"

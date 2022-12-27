@@ -1,0 +1,8 @@
+- name: Install dependencies
+  pkgng:
+    name:
+      - py39-pip
+      - shuf
+      - ImageMagick7
+    state: present
+  include_tasks: ../../general/tasks/pywalconfig.yml
