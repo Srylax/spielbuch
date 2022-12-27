@@ -1,4 +1,4 @@
 - hosts: localhost
   become: true
   tasks:
-    - include: tasks/amdgpu.yaml
+    - include: tasks/amdgpu.yml
