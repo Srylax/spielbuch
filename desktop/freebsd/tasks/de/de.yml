@@ -4,6 +4,5 @@
       - alacritty
     state: present
 
-- name: DE Dependencies
-  tasks:
-    - include_tasks: sst.yml
+- name: SST
+  include_tasks: sst.yml
