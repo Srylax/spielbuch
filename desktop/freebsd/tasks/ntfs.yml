@@ -8,6 +8,3 @@
 
 - name: configure fusefs
   command: sysrc fusefs_enable=”YES”
-
-- name: start fusefs
-  command: kldload fusefs
