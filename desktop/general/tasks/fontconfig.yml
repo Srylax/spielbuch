@@ -1,2 +1,2 @@
 - name: Copy FontConfig
-  copy: ./config/fontconfig/font.conf dest=/home/srylax/.config/fontconfig/font.conf owner=srylax group=srylax mode=600
+  copy: src=desktop/general/config/fontconfig/font.conf dest=/home/srylax/.config/fontconfig/font.conf owner=srylax group=srylax mode=600
