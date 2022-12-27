@@ -6,7 +6,15 @@
       - sway
       - swayidle
       - swaylock-effects
+      - lxsession
+      - py39-pip
     state: present
+
+- name: Install pywal
+  pip:
+    name:
+      - pywal
+      - pywalfox
 
 - name: configure seatd
   command: sysrc seatd_enable="YES"

@@ -41,12 +41,12 @@ output DP-1 mode 2560x1440@165Hz pos 0 1440
 output * bg $wallpaper fill
 
 
-exec wl-paste -t text --watch clipman store
-# exec wl-paste -p -t text --watch clipman store -P
+#exec wl-paste -t text --watch clipman store
+#exec wl-paste -p -t text --watch clipman store -P
 
 # Fix for screencapture
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && \
+#exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+#exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 ##-- Colors ------------------------------
 
