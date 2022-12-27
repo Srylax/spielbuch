@@ -1,5 +1,4 @@
 - name: Install Wayland and sway
-  include_tasks: pywal.yml
   pkgng:
     name:
       - wayland
@@ -9,6 +8,9 @@
       - swaylock-effects
       - lxsession
     state: present
+
+- name: Pywal
+  include_tasks: pywal.yml
 
 - name: configure seatd
   command: sysrc seatd_enable="YES"
