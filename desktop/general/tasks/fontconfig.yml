@@ -5,3 +5,4 @@
     owner: srylax
     group: srylax
     mode: 0755
+    force: true
