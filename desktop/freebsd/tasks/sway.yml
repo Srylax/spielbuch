@@ -21,8 +21,7 @@
 - name: Run Pywal
   command:
     argv:
-      - wal -e -i
-      - $(find /home/srylax/.config/sway/wallpapers/ -type f | shuf -n 1)
+      - wal -e -i $(find /home/srylax/.config/sway/wallpapers/ -type f | shuf -n 1)
 
 - name: Run Pywalfox
   command: pywalfox install
