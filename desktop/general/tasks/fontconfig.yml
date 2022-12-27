@@ -4,4 +4,4 @@
     dest: /home/srylax/.config/fontconfig/
     owner: srylax
     group: srylax
-    mode: 755
+    mode: 0755
