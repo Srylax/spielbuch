@@ -9,7 +9,7 @@
       - lxsession
       - py39-pip
       - shuf
-      - imagemagick7
+      - ImageMagick7
     state: present
 
 - name: Install pywal
