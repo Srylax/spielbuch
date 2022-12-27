@@ -4,4 +4,3 @@
     dest: /home/srylax/.config/fontconfig/
     owner: srylax
     group: srylax
-    mode: 600
