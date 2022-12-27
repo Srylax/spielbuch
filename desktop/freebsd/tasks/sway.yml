@@ -8,6 +8,7 @@
       - swaylock-effects
       - lxsession
       - py39-pip
+      - shuf
     state: present
 
 - name: Install pywal
@@ -15,6 +16,12 @@
     name:
       - pywal
       - pywalfox
+
+- name: Run Pywal
+  command: wal -i $(find /home/srylax/.config/sway/wallpapers/ -type f | shuf -n 1)
+
+- name: Run Pywalfox
+  command: pywalfox install
 
 - name: configure seatd
   command: sysrc seatd_enable="YES"
