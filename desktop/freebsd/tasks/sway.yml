@@ -12,4 +12,5 @@
   command: sysrc seatd_enable="YES"
 
 - name: start seatd
-  command: service seatd start
+  service: seatd
+  state: started
