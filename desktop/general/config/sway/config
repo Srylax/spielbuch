@@ -67,6 +67,7 @@ client.background       $background
 
 # -- Terminal --
 bindsym $mod+Return 			exec --no-startup-id st /bin/fish
+bindsym $mod+Shift+Return 			exec --no-startup-id alacritty
 
 # -- Apps --
 # bindsym $mod+Shift+f 			exec --no-startup-id thunar

@@ -2,6 +2,7 @@
   pkgng:
     name:
       - alacritty
+      - ncurses
     state: present
 
 - name: SST
