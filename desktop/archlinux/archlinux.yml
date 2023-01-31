@@ -1,0 +1,13 @@
+- hosts: localhost
+  become: true
+  tasks:
+    - include_tasks: ../general/tasks/env.yml
+    - include_tasks: tasks/font.yml
+    - include_tasks: ../general/tasks/fontconfig.yml
+    - include_tasks: ../general/tasks/fish.yml
+    - include_tasks: tasks/starship.yml
+    - include_tasks: tasks/amdgpu.yml
+    - include_tasks: tasks/sway.yml
+    - include_tasks: ../general/tasks/swayconfig.yml
+    - include_tasks: tasks/ntfs.yml
+    - include_tasks: tasks/de/de.yml

@@ -1,0 +1,9 @@
+- name: Clone SST
+  git:
+    repo: 'https://github.com/Srylax/sst'
+    dest: /home/srylax/dev/workspaces/sst/
+
+- name: Make SST
+  make:
+    chdir: /home/srylax/dev/workspaces/sst/
+    target: install

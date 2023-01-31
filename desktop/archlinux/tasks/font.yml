@@ -1,0 +1,7 @@
+- name: Install Fonts
+  community.general.pacman:
+    name:
+      - ttf-firacode-nerd
+      - ttf-linux-libertine-g
+      - noto-fonts-emoji
+    state: present

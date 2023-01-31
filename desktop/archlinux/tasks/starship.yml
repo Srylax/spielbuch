@@ -1,0 +1,9 @@
+- name: Install the Starship prompt
+  community.general.pacman:
+    name: starship
+    state: present
+
+- name: Add Starship Prompt to Fish
+  lineinfile:
+    path: /home/srylax/.config/fish/config.fish
+    line: starship init fish | source

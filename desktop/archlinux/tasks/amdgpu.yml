@@ -1,0 +1,7 @@
+- name: Install the graphics/drm-kmod package
+  pkgng:
+    name:
+      - mesa
+      - lib32-mesa
+      - vulkan-radeon
+    state: present

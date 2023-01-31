@@ -1,0 +1,8 @@
+- name: Install Applications
+  community.general.pacman:
+    name:
+      - alacritty
+    state: present
+
+- name: SST
+  include_tasks: sst.yml

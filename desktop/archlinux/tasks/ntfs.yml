@@ -1,0 +1,4 @@
+- name: Install Wayland and sway
+  community.general.pacman:
+    name: ntfs-3g
+    state: present

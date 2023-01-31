@@ -1,0 +1,12 @@
+- name: Install Wayland and sway
+  community.general.pacman:
+    name:
+      - wayland
+      - sway
+      - swayidle
+      - swaylock-effects
+      - lxsession
+    state: present
+
+- name: Pywal
+  include_tasks: pywal.yml
