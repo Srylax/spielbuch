@@ -5,12 +5,14 @@
       - nano
       - fish
       - firefox
-      - sov
+
     state: present
 
 #- name: Install Applications with yay
 #  community.general.pacman:
-#    name: jetbrains-toolbox
+#    name:
+#        - jetbrains-toolbox
+#        - sov
 #    state: present
 #    executable: yay
 #    extra_args: --builddir /var/cache/yay
