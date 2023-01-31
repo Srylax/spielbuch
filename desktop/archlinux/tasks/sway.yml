@@ -9,6 +9,7 @@
       - lxsession
       - python-setuptools
       - imagemagick
+      - swaybg
     state: present
 
 - name: Pywal
