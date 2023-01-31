@@ -3,6 +3,7 @@
     name:
       - alacritty
       - ncurses
+      - intellij-ultimate
     state: present
 
 - name: SST
