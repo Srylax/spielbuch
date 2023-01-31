@@ -6,6 +6,7 @@
       - swayidle
       - swaylock
       - lxsession
+      - python-setuptools
     state: present
 
 - name: Pywal
