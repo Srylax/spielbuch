@@ -4,7 +4,7 @@
       - wayland
       - sway
       - swayidle
-      - swaylock-effects
+      - swaylock
       - lxsession
     state: present
 
