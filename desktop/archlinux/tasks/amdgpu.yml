@@ -1,5 +1,5 @@
 - name: Install the graphics/drm-kmod package
-  pkgng:
+  community.general.pacman:
     name:
       - mesa
       - lib32-mesa
