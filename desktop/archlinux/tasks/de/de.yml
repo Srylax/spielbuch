@@ -3,6 +3,7 @@
     name:
       - alacritty
       - nano
+      - fish
     state: present
 
 - name: SST
