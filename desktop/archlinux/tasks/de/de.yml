@@ -7,12 +7,12 @@
       - firefox
     state: present
 
-- name: Install Applications with yay
-  community.general.pacman:
-    name: jetbrains-toolbox
-    state: present
-    executable: yay
-    extra_args: --builddir /var/cache/yay
+#- name: Install Applications with yay
+#  community.general.pacman:
+#    name: jetbrains-toolbox
+#    state: present
+#    executable: yay
+#    extra_args: --builddir /var/cache/yay
 
 - name: SST
   include_tasks: sst.yml
