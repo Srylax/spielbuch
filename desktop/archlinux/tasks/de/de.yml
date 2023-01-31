@@ -4,6 +4,7 @@
       - alacritty
       - nano
       - fish
+      - firefox
     state: present
 
 - name: SST
