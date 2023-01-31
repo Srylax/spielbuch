@@ -2,6 +2,7 @@
   community.general.pacman:
     name:
       - alacritty
+      - nano
     state: present
 
 - name: SST
