@@ -2,6 +2,7 @@
   community.general.pacman:
     name:
       - wayland
+      - xorg-xwayland
       - sway
       - swayidle
       - swaylock
