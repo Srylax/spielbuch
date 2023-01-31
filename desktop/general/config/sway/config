@@ -34,9 +34,9 @@ exec wal -R
 exec pywalfox update
 include $HOME/.cache/wal/colors-sway
 
-output HDMI-A-1 mode 2560x1440@120Hz pos 0 0
-output DP-1 mode 2560x1440@165Hz pos 0 1440
-#output DP-1 mode 2560x1440@165Hz pos 0 0
+#output HDMI-A-1 mode 2560x1440@120Hz pos 0 0
+#output DP-1 mode 2560x1440@165Hz pos 0 1440
+output DP-1 mode 2560x1440@165Hz pos 0 0
 
 output * bg $wallpaper fill
 
@@ -45,9 +45,9 @@ output * bg $wallpaper fill
 #exec wl-paste -p -t text --watch clipman store -P
 
 # Fix for screencapture
-#exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-#exec hash dbus-update-activation-environment 2>/dev/null && \
-#     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 ##-- Colors ------------------------------
 
 # class                 border  backgr. text    indicator child_border #$background $foreground $color7 $background
