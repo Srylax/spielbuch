@@ -1,11 +1,11 @@
 - name: Ensure Multilib is enabled
   ansible.builtin.lineinfile:
     path: /etc/pacman.conf
-    regexp: '^#[multilib]'
+    search_string: "#[multilib]"
     line: "[multilib]"
 
 - name: Ensure Multilib is enabled 2
   ansible.builtin.lineinfile:
     path: /etc/pacman.conf
-    regexp: '^#Include = /etc/pacman.d/mirrorlist'
+    search_string: "#Include = /etc/pacman.d/mirrorlist"
     line: "Include = /etc/pacman.d/mirrorlist"
