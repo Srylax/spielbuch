@@ -5,6 +5,7 @@
       - nano
       - fish
       - firefox
+      - sov
     state: present
 
 #- name: Install Applications with yay
