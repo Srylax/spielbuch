@@ -7,5 +7,12 @@
       - firefox
     state: present
 
+- name: Install Applications with yay
+  community.general.pacman:
+    name:
+      - jetbrains-toolbox
+    state: present
+    executable: yay
+
 - name: SST
   include_tasks: sst.yml
