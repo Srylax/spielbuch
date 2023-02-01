@@ -6,6 +6,7 @@
       - fish
       - firefox
       - xorg-xrdb
+      - thunar
     state: present
 
 #- name: Install Applications with yay
