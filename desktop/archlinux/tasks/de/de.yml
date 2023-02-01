@@ -9,7 +9,7 @@
       - thunar
       - waybar
       - starship
-      - fuzzel
+      - wofi
     state: present
 
 #- name: Install Applications with yay
