@@ -74,13 +74,8 @@ bindsym $mod+Shift+f 			exec --no-startup-id thunar
 # bindsym $mod+Shift+e 			exec --no-startup-id geany
 bindsym $mod+Shift+w 			exec --no-startup-id firefox
 
-# -- rofi --
-bindsym $alt+F1 				exec --no-startup-id ~/.config/sway/rofi/bin/launcher
-bindsym $mod+n 					exec --no-startup-id ~/.config/sway/rofi/bin/network_menu
-bindsym $mod+x 					exec --no-startup-id ~/.config/sway/rofi/bin/powermenu
-bindsym $mod+m 					exec --no-startup-id ~/.config/sway/rofi/bin/mpd
-bindsym $mod+i 					exec --no-startup-id ~/.config/sway/rofi/bin/network
-bindsym $mod+Shift+v			exec --no-startup-id ~/.config/sway/rofi/bin/clipman
+# -- wofi --
+bindsym $alt+F1 				exec --no-startup-id wofi
 
 # -- Function keys --
 bindsym XF86AudioRaiseVolume 	exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +5%"

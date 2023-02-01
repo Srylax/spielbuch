@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-clipman pick -t rofi -T'-i -theme ".config/sway/rofi/themes/clipman.rasi"' --primary --notify
