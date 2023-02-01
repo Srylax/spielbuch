@@ -1,8 +1,0 @@
-- name: Copy FontConfig
-  copy:
-    src: ../config/fontconfig/fonts.conf
-    dest: /home/srylax/.config/fontconfig/
-    owner: srylax
-    group: srylax
-    mode: 0755
-    force: true

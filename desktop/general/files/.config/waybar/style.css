@@ -1,0 +1,138 @@
+@import "/home/srylax/.cache/wal/colors-waybar.css";
+
+* {
+  border: none;
+  font-family: Iosevka Nerd Font, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: @background;
+  border-bottom: 4px solid @background;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces,
+#mode,
+#cpu,
+#memory,
+#temperature,
+#custom-media,
+#custom-fans,
+#clock,
+#idle_inhibitor,
+#language,
+#pulseaudio,
+#backlight,
+#battery,
+#network,
+#tray {
+  background-color: @color3;
+  padding: 0 10px;
+  margin: 5px;
+  /* border: 4px solid rgba(0,0,0,0); */
+  /* border-bottom: none; */
+  border-radius: 90px;
+  background-clip: padding-box;
+
+}
+
+#workspaces button {
+  padding: 0 5px;
+  min-width: 20px;
+  color: @color7;
+  /* border-bottom: 4px solid @color3; */
+  border-radius: 20px;
+}
+
+
+#workspaces button:hover {
+  /* background-color: @color8; */
+  /* border: 4px solid @color8; */
+}
+
+
+
+#workspaces button.focused  {
+  color: @color2;
+  border-radius: 0;
+  border-bottom: 4px solid @color2;
+}
+
+#workspaces button.urgent {
+  color: @color2;
+}
+
+/* #cpu {
+  color: #61afef;
+}
+
+#memory {
+  color: #c678dd;
+}
+
+#temperature {
+  color: #d19a66;
+} */
+
+/* #temperature.critical {
+  background-color: #e06c75;
+  color: #1e222a;
+} */
+
+#custom-media {
+  background-color: @color2;
+  color: @background;
+}
+/*
+#custom-fans {
+  color: #98c379;
+} */
+
+#clock {
+  color: @background;
+  background-color: @color3;
+}
+
+/* #idle_inhibitor {
+  color: #abb2bf;
+} */
+
+/* #idle_inhibitor.activated {
+  background-color: #abb2bf;
+  color: #1e222a;
+} */
+
+#language {
+  background-color: @color6;
+  color: @background;
+}
+
+#pulseaudio {
+  color: @background;
+  background-color: @color5;
+}
+
+#pulseaudio.muted {
+  background-color: @color2;
+  color: @background;
+}
+
+#network {
+  background-color: @foreground;
+  color: @background;
+}
+
+#network.disconnected {
+  background-color: @color2;
+  color: @background;
+}
+#tray {
+  background-color: @color1;
+}

@@ -7,7 +7,7 @@
       - firefox
       - xorg-xrdb
       - thunar
-      - polybar
+      - waybar
     state: present
 
 #- name: Install Applications with yay

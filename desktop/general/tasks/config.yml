@@ -1,0 +1,8 @@
+- name: Copy Configs
+  copy:
+    src: ../files/.config/
+    dest: /home/srylax/.config/
+    owner: srylax
+    group: srylax
+    mode: 0755
+    force: true

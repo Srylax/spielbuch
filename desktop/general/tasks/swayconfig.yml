@@ -1,8 +1,0 @@
-- name: Copy Sway
-  copy:
-    src: ../config/sway/
-    dest: /home/srylax/.config/sway/
-    owner: srylax
-    group: srylax
-    mode: 0755
-    force: true
