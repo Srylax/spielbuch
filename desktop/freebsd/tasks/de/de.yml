@@ -4,6 +4,7 @@
       - alacritty
       - ncurses
       - intellij-ultimate
+      - starship
     state: present
 
 - name: SST

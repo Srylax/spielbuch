@@ -22,3 +22,4 @@ alias fat='du * -shc'
 # thefuck --alias | source
 
 #source /opt/asdf-vm/asdf.fish
+starship init fish | source

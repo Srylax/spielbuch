@@ -1,9 +1,0 @@
-- name: Install the Starship prompt
-  pkgng:
-    name: starship
-    state: present
-
-- name: Add Starship Prompt to Fish
-  lineinfile:
-    path: /home/srylax/.config/fish/config.fish
-    line: starship init fish | source
