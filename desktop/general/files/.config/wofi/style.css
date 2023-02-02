@@ -4,13 +4,13 @@
 }
 
 #window {
-    background-color: #22212C;
+    background-color: #0B0D0F;
     color: #F8F8F2;
     border-radius: 10px;
 }
 
 #input {
-    background-color: #22212C;
+    background-color: #0B0D0F;
     color: #F8F8F2;
 }
 
@@ -22,7 +22,7 @@
     margin: 5px;
 }
 #entry:selected {
-    background-color: #454158;
+    background-color: #414D58;
     border-style: solid;
     border-radius: 3px;
 }
