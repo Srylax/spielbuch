@@ -1,7 +1,7 @@
 - name: Install Applications
   community.general.pacman:
     name:
-      - alacritty
+      - kitty
       - nano
       - fish
       - firefox
@@ -18,6 +18,9 @@
 #    name:
 #        - jetbrains-toolbox
 #        - sov
+#        - Hyprland
+#        - wev
+#        - hyprpaper-git
 #    state: present
 #    executable: yay
 #    extra_args: --builddir /var/cache/yay
