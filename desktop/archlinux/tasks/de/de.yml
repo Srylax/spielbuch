@@ -16,7 +16,6 @@
       - firefox
       - xorg-xrdb
       - thunar
-      - waybar
       - starship
       - wofi
       - unzip
@@ -30,6 +29,8 @@
 #        - Hyprland
 #        - wev
 #        - hyprpaper-git
+#        - xdg-desktop-portal-hyprland-git
+#        - gtkcord4
 #    state: present
 #    executable: yay
 #    extra_args: --builddir /var/cache/yay

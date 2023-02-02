@@ -1,4 +1,15 @@
-@import "/home/srylax/.cache/wal/colors-waybar.css";
+@define-color background   #0B0D0F;
+@define-color foreground   #F8F8F2;
+@define-color cyan         #80FFEA;
+@define-color green        #8AFF80;
+@define-color orange       #FFCA80;
+@define-color pink         #FF80BF;
+@define-color purple       #9580FF;
+@define-color red          #FF9580;
+@define-color yellow       #FFFF80;
+@define-color background   #0B0D0F;
+@define-color comment      #708CA9;
+@define-color selection    #414D58;
 
 * {
   border: none;
@@ -33,7 +44,7 @@ window#waybar.hidden {
 #battery,
 #network,
 #tray {
-  background-color: @color3;
+  background-color: @foreground;
   padding: 0 10px;
   margin: 5px;
   /* border: 4px solid rgba(0,0,0,0); */
@@ -46,7 +57,7 @@ window#waybar.hidden {
 #workspaces button {
   padding: 0 5px;
   min-width: 20px;
-  color: @color7;
+  color: @selection;
   /* border-bottom: 4px solid @color3; */
   border-radius: 20px;
 }
@@ -60,13 +71,13 @@ window#waybar.hidden {
 
 
 #workspaces button.focused  {
-  color: @color2;
+  color: @selection;
   border-radius: 0;
-  border-bottom: 4px solid @color2;
+  border-bottom: 4px solid @selection;
 }
 
 #workspaces button.urgent {
-  color: @color2;
+  color: @red;
 }
 
 /* #cpu {
@@ -86,18 +97,18 @@ window#waybar.hidden {
   color: #1e222a;
 } */
 
-#custom-media {
-  background-color: @color2;
-  color: @background;
-}
+/*#custom-media {*/
+/*  background-color: @color2;*/
+/*  color: @background;*/
+/*}*/
 /*
 #custom-fans {
   color: #98c379;
 } */
 
 #clock {
-  color: @background;
-  background-color: @color3;
+  color: @foreground;
+  background-color: @selection;
 }
 
 /* #idle_inhibitor {
@@ -109,20 +120,20 @@ window#waybar.hidden {
   color: #1e222a;
 } */
 
-#language {
-  background-color: @color6;
-  color: @background;
-}
+/*#language {*/
+/*  background-color: @color6;*/
+/*  color: @background;*/
+/*}*/
 
-#pulseaudio {
-  color: @background;
-  background-color: @color5;
-}
+/*#pulseaudio {*/
+/*  color: @background;*/
+/*  background-color: @color5;*/
+/*}*/
 
-#pulseaudio.muted {
-  background-color: @color2;
-  color: @background;
-}
+/*#pulseaudio.muted {*/
+/*  background-color: @color2;*/
+/*  color: @background;*/
+/*}*/
 
 #network {
   background-color: @foreground;
@@ -130,9 +141,9 @@ window#waybar.hidden {
 }
 
 #network.disconnected {
-  background-color: @color2;
+  background-color: @red;
   color: @background;
 }
 #tray {
-  background-color: @color1;
+  background-color: @selection;
 }
