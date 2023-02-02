@@ -2,6 +2,9 @@
   community.general.pacman:
     name:
       - kitty
+      - gnome-keyring
+      - libsecret
+      - openssh
       - nano
       - fish
       - firefox
