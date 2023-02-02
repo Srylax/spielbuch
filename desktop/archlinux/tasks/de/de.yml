@@ -10,6 +10,7 @@
       - waybar
       - starship
       - wofi
+      - unzip
     state: present
 
 #- name: Install Applications with yay

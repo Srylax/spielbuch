@@ -1,11 +1,28 @@
-window {
-    background-color: #002b36;
-    color: #839496;
-    border: 2px solid #657b83;
+* {
+    outline: none;
+    border: none;
+}
+
+#window {
+    background-color: #22212C;
+    color: #F8F8F2;
+    border-radius: 10px;
 }
 
 #input {
-    background-color: #002b36;
-    color: #839496;
-    border: 2px solid #657b83;
+    background-color: #22212C;
+    color: #F8F8F2;
+}
+
+#outer-box {
+    margin: 5px;
+    padding: 10px;
+}
+#img {
+    margin: 5px;
+}
+#entry:selected {
+    background-color: #454158;
+    border-style: solid;
+    border-radius: 3px;
 }

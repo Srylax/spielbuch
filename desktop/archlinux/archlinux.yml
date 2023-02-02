@@ -5,6 +5,7 @@
     - include_tasks: ../general/tasks/config.yml
     - include_tasks: tasks/font.yml
     - include_tasks: tasks/amdgpu.yml
-    - include_tasks: tasks/sway.yml
+#    - include_tasks: tasks/sway.yml
+    - include_tasks: tasks/hyprland.yml
     - include_tasks: tasks/ntfs.yml
     - include_tasks: tasks/de/de.yml

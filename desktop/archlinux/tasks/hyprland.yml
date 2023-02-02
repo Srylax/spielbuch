@@ -1,0 +1,7 @@
+- name: Install Wayland and hyprland
+  community.general.pacman:
+    name:
+      - wayland
+      - xorg-xwayland
+      - lxsession
+    state: present

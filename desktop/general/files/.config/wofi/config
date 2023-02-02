@@ -1,5 +1,8 @@
-width=600
-height=400
-mode=run
-colors=colors
-filter_rate=100
+width=20%
+lines=5
+mode=drun
+prompt=Start typing...
+allow_images=true
+gtk_dark=true
+dynamic_lines=true
+image_size=16

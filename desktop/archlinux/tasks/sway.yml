@@ -3,11 +3,11 @@
     name:
       - wayland
       - xorg-xwayland
+      - lxsession
+      - python-setuptools
       - sway
       - swayidle
       - swaylock
-      - lxsession
-      - python-setuptools
       - imagemagick
       - swaybg
     state: present
