@@ -19,6 +19,9 @@
       - starship
       - wofi
       - unzip
+      - gtk4
+      - gtk3
+      - gtk2
     state: present
 
 #- name: Install Applications with yay
@@ -31,6 +34,7 @@
 #        - hyprpaper-git
 #        - xdg-desktop-portal-hyprland-git
 #        - gtkcord4
+#        - nwg-look
 #    state: present
 #    executable: yay
 #    extra_args: --builddir /var/cache/yay

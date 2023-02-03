@@ -1,5 +1,5 @@
 * {
-    outline: none;
+    outline-style: none;
     border: none;
 }
 
@@ -12,8 +12,11 @@
 #input {
     background-color: #0B0D0F;
     color: #F8F8F2;
-}
 
+}
+#input > image.left {
+    -gtk-icon-transform:scaleX(0);
+}
 #outer-box {
     margin: 5px;
     padding: 10px;
@@ -25,4 +28,9 @@
     background-color: #414D58;
     border-style: solid;
     border-radius: 3px;
+}
+#input:focus, #input:active {
+    outline-color: #414D58;
+    outline-style: none;
+    border: #414D58;
 }

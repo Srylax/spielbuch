@@ -1,0 +1,20 @@
+/**********************
+ * DE-Specific Styles *
+ **********************/
+
+@import 'gtk-3.20/apps/budgie';
+@import 'gtk-3.20/apps/gnome';
+@import 'gtk-3.20/apps/pantheon';
+@import 'gtk-3.20/apps/xfce';
+@import 'gtk-3.20/apps/unity';
+@import 'gtk-3.20/apps/mate';
+
+/***********************
+ * App-Specific Styles *
+ ***********************/
+
+@import 'gtk-3.20/apps/geary';
+@import 'gtk-3.20/apps/lightdm';
+@import 'gtk-3.20/apps/thunar';
+@import 'gtk-3.20/apps/nemo';
+@import 'gtk-3.20/apps/caja';

@@ -6,3 +6,12 @@
     group: srylax
     mode: 0755
     force: true
+
+- name: Copy .local
+  copy:
+    src: ../files/.local/
+    dest: /home/srylax/.local/
+    owner: srylax
+    group: srylax
+    mode: 0755
+    force: true
