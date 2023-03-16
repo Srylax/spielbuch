@@ -2,6 +2,6 @@
   community.general.pacman:
     name:
       - mesa
-      - lib32-mesa
+#      - lib32-mesa
       - vulkan-radeon
     state: present
